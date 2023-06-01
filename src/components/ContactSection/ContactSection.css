@@ -1,0 +1,33 @@
+#contact-section{
+  width: calc(100vw/3*2);
+  box-sizing: border-box;
+  
+  min-height: 50vh;
+  padding: 0vh 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: gray; */
+  z-index: 10;
+
+  background: #316690;
+  background: -moz-radial-gradient(center, ellipse cover, #316690 0%, #293477 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #316690 0%,#293477 100%);
+  background: radial-gradient(ellipse at center, #316690 0%,#293477 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#316690', endColorstr='#293477',GradientType=1 );
+}
+
+
+@media screen and (max-device-width: 420px) {
+
+  #contact-section{
+    width: 100vw;  
+    padding-top: 20px;
+    padding-bottom: 20px;    
+    display: block;
+    min-height: 100%;
+  
+  }
+
+}

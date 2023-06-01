@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Rawson-black';
+  src: url('./Rawson-Black.eot'); /* IE9 Compat Modes */
+  src: url('./Rawson-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Rawson-Black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Rawson-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./Rawson-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rawson-BlackIt';
+  src: url('./Rawson-BlackIt.eot'); /* IE9 Compat Modes */
+  src: url('./Rawson-BlackIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Rawson-BlackIt.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Rawson-BlackIt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./Rawson-BlackIt.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rawson-Regular';
+  src: url('./Rawson-Regular.eot'); /* IE9 Compat Modes */
+  src: url('./Rawson-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Rawson-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Rawson-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./Rawson-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rawson-RegularIt';
+  src: url('./Rawson-RegularIt.eot'); /* IE9 Compat Modes */
+  src: url('./Rawson-RegularIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Rawson-RegularIt.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Rawson-RegularIt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./Rawson-RegularIt.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rawson-Thin';
+  src: url('./Rawson-Thin.eot'); /* IE9 Compat Modes */
+  src: url('./Rawson-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Rawson-Thin.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Rawson-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./Rawson-Thin.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rawson-ThinIt';
+  src: url('./Rawson-ThinIt.eot'); /* IE9 Compat Modes */
+  src: url('./Rawson-ThinIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./Rawson-ThinIt.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Rawson-ThinIt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./Rawson-ThinIt.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+

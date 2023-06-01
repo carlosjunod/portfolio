@@ -1,0 +1,130 @@
+/* Modal Container */
+#modal-container{
+  width: 65vw;
+  height: 100%;
+  padding-top: 40px;
+}
+
+#modal-container figure{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  padding: 0px;
+  margin: 0px;
+}
+
+#modal-container figure img{
+  height: 100%;
+  width: 100%;
+}
+
+#modal-container figure figcaption{
+  padding: 20px;
+}
+
+/* Modal Content */
+#modal-container h1{
+  font-family: 'Rawson-black', sans-serif;
+  font-size: 3em;
+}
+
+/* Close button */
+#close{
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  z-index: 200;
+  width: 110px;
+  height: 110px;
+  text-align:center;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#close span{
+  position: absolute;
+  content: " ";
+  width: 110px;
+  background-color: white;
+  height: 1px;
+  left:0;
+  top: 50px;
+  transition: all 300ms;
+}
+
+#close:after{
+  content: "close";
+  width: 100%;
+  bottom: -20px;
+  left:0;
+  position: absolute;
+  transition: all 400ms;
+  opacity: .7;  
+}
+
+#close:hover:after{
+  bottom: 10px;
+}
+
+#close:hover span{
+  top: 40px;
+  width: 90px;
+  left: 10px;
+  opacity: .7;
+}
+
+#close span:nth-child(1){
+  transform: rotate(-45deg);
+}
+
+#close span:nth-child(2){
+  transform: rotate(45deg);
+}
+
+#close:hover span:nth-child(1){
+  transform: rotate(45deg);
+}
+
+#close:hover span:nth-child(2){
+  transform: rotate(-45deg);
+}
+
+/* Animation modal */
+.my-modal{
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  overflow: scroll;
+}
+
+.modal-enter{
+  opacity: 0;
+  transition: all .33s;
+  top: -100px;    
+}
+
+.modal-enter-active{
+  top: 0px;
+  opacity: 1;
+}
+
+.modal-leave{
+  background-color: blue;
+  transition: all .33s;
+  top: 0px; 
+}
+
+.modal-leave-active{
+  opacity: 0;
+  top: -100px;  
+}

@@ -1,0 +1,9 @@
+.project{
+  width: 100vw;
+  height: calc(100vh/2);
+  background-color: #E76464;
+  /* border-top: 2px solid white; */
+  position: relative;
+  perspective: 900;
+  /* overflow: hidden; */
+}

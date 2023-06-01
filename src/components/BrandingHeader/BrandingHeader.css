@@ -1,0 +1,66 @@
+#branding-header{
+  width: 100vw;
+  color: #373B3D;
+  padding: 7vw 10vw;
+  position: relative;
+  z-index: 2;  
+  display: flex;
+  background-color: #F3F3F3;  
+}
+
+.text-col{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 60vw;
+  margin-right: 10vw;
+}
+
+.text-col p{
+  font-family: 'Rawson-light', sans-serif;
+  font-size: 1.2em;
+  position: relative;
+  top:-50px;
+}
+
+.dribble-link{
+  width: 100%;
+}
+
+.visit-me{
+  display: none;
+}
+
+@media screen and (max-device-width: 420px) {
+  #branding-header{
+    padding: 12vw 10vw;
+    flex-direction: column;
+  }
+
+  .text-col{
+    width: 100%;
+  }
+
+  .text-col p{
+    top:0px;
+  }
+
+  .drible{
+    width: 45vw;
+    margin: 0px auto;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .visit-me{
+    font-family: 'Rawson-bold', sans-serif;  
+    font-style: normal;
+    font-size: 1.2em;
+    display: block;
+  }
+
+  .dribble-link{
+    margin-top: 10px;
+  }
+  
+}  

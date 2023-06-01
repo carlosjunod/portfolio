@@ -1,0 +1,18 @@
+h2.title-project{
+  position: absolute;
+  font-family: 'Rawson-black', sans-serif;
+  font-size: 4.3em;
+  color: white;
+  top: 12%; 
+  right: -10%;
+}
+
+@media screen and (max-device-width: 420px) {
+  h2.title-project{
+    display:block;
+    position: static;
+    margin: 0px 0px 10px 0px;
+    font-size: 3.5em;
+    line-height: .9em;
+  }
+}

@@ -1,0 +1,54 @@
+.separation{
+  width: calc(100vw/3);
+}
+
+#about{
+  width: calc(100vw/3);
+  flex-grow: 1;  
+  background-color: #292D3E;
+  padding: 20px;
+  min-height: 50vh;
+}
+
+pre{
+  padding: 0px;
+  margin: 0px;
+}
+
+h3,h4{
+  margin: 0px;
+  color: white;
+  font-family: 'Rawson-light', sans-serif;  
+}
+
+h3{
+  font-size: 2.2em;
+}
+h4{
+  font-size: 1.8em;
+}
+
+
+@media screen and (max-device-width: 420px) {
+  #about{
+    width: 90vw;
+    padding: 5vh 5vw;  
+  }
+
+  #about .hljs {
+    padding: 20px;
+    widows: 90vw;
+  }
+
+  .separation{
+    width: 100vw;
+  }
+
+  #about h3, #about h4{
+    display: inline;
+    margin-right: 20px;
+  }
+
+  
+  
+}  

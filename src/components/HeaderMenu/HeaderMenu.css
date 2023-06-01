@@ -1,0 +1,36 @@
+#menu{
+  left: 0%;
+  right: 0%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 1rem;
+  color: #529AA5;
+  font-size: 2rem;
+  line-height: .7em;
+  z-index: 10;
+  transition: all .4s ease-out .2s;
+  top: -150px;
+}
+
+.logo-col{
+  width: 15%;
+}
+
+.logo-col img{
+  width: 100%;
+  /* height: 100%; */
+}
+
+.social-network{
+  width: 60%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  color: #373B3D;
+}
+
+.social-network li {
+  padding: 0px 10px;
+}

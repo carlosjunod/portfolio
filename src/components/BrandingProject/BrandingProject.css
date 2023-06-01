@@ -1,0 +1,74 @@
+.branding-project{
+  position: relative;
+  width: calc(100vw/3);
+  height: calc(100vh/2);
+  background-size: cover;
+  background-color: #263238;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+/* Background */
+.branding-project .bg{
+  position: absolute;
+  width: 160%;
+  transition: all 400ms;  
+}
+
+.branding-project .bg img{
+  width:140%;
+}
+
+.branding-project:hover .bg{
+  width: 120%;
+  opacity: .6;
+  transform: rotate(5deg);
+}
+
+/* Logo */
+
+.branding-project .logo{
+  width: 80%;
+  transition: all 500ms;
+  z-index: 10;
+}
+
+.branding-project:hover .logo{
+  width: 90%;
+}
+
+/* Dribbble */
+.dribbble{
+  background-color: #E9508A;
+  width: 20%;
+  position: absolute;
+  bottom:-30px;
+  text-align: center;
+  padding: 6px;
+  border-radius: 5px 5px 0px 0px;
+  font-weight: lighter;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.branding-project:hover .dribbble{
+  bottom:0px;
+  transition: all 500ms;
+}
+
+@media screen and (max-device-width: 420px) {
+  .branding-project{
+    width: 100vw;
+  }
+  .dribbble{
+    width: 30%;
+    bottom: 0px;
+  }
+}

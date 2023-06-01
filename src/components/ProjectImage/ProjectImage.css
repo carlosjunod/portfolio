@@ -1,0 +1,12 @@
+.image{
+  height: 50vh;
+  position:absolute;
+}
+
+@media screen and (max-device-width: 420px) {
+  .image{
+    position: static;
+    display: block;
+    max-width: 100%;
+  }
+}

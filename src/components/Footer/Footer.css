@@ -1,0 +1,42 @@
+footer{
+  background-color: #171C25;
+}
+
+footer ul{
+  color: #F3F3F3;
+  list-style: none;
+  padding: 40px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul li{
+  padding: 10px;
+}
+
+.web{
+  font-family: 'Rawson-light', sans-serif;   
+}
+.phone{
+  margin-left: auto;
+}
+
+.email{
+  font-family: 'Rawson-bold', sans-serif;  
+}
+
+@media screen and (max-device-width: 420px) {
+  footer ul{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer ul li{
+    text-align: left;
+  }
+
+  .phone{
+    margin-left: 0px;
+  }
+}
