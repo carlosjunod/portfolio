@@ -15,7 +15,7 @@ const BrandingProject = ({ content }) => (
     <img src={content.logo} alt={content.title} className='logo' />
 
     <span className='bg'>
-      <img src={content.bg_image} alt={content.title} />
+      {content.bg_image && <img src={content.bg_image} alt={content.title} />}
     </span>
 
     <span className='dribbble'>
