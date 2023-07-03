@@ -126,7 +126,7 @@ class App extends Component {
           bg_color: "#106897",
           txt_color: "#ffffff",
           bg_image: "",
-          logo: process.env.REACT_APP_LOCAL_URL + "/images/CCM_stucco.svg",
+          logo: process.env.REACT_APP_LOCAL_URL + "/images/cmm_stucco.svg",
           content:
             "Aenean tincidunt gravida libero, at fermentum lorem euismod imperdiet. Maecenas venenatis dui eu nisl euismod, non mattis sapien auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
           link: "https://dribbble.com/shots/3857644-CCM-Stucco-Logo",
