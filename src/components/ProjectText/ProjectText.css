@@ -1,19 +1,18 @@
-p.content{
+p.content {
   position: absolute;
-  color:white;
-  width: calc(100vw/3);
-  top:40%;
+  color: white;
+  width: calc(100vw / 3);
+  top: 40%;
   text-align: right;
   font-size: 1.2em;
 }
 
-
-@media screen and (max-device-width: 420px) {
-  p.content{
+@media screen and (max-device-width: 430px) {
+  p.content {
     /* top: 0; */
     position: static;
     width: 100%;
     display: block;
-    text-align: left;  
-  }  
-}  
+    text-align: left;
+  }
+}

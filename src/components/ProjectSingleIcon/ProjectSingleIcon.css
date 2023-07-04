@@ -1,4 +1,4 @@
-.project-icon li{
+.project-icon li {
   display: inline-flex;
   font-size: 3rem;
   padding: 10px;
@@ -10,9 +10,9 @@ i {
   color: white;
 }
 
-@media screen and (max-device-width: 420px) {
-  .project-icon li{
+@media screen and (max-device-width: 430px) {
+  .project-icon li {
     position: static;
     font-size: 2.4em;
-  }  
-}  
+  }
+}

@@ -90,7 +90,7 @@
   font-style: italic;
 }
 
-@media screen and (max-device-width: 420px) {
+@media screen and (max-device-width: 430px) {
   #contact-form form {
     width: 90vw;
   }

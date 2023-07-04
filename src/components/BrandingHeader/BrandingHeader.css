@@ -1,14 +1,14 @@
-#branding-header{
+#branding-header {
   width: 100vw;
-  color: #373B3D;
+  color: #373b3d;
   padding: 7vw 10vw;
   position: relative;
-  z-index: 2;  
+  z-index: 2;
   display: flex;
-  background-color: #F3F3F3;  
+  background-color: #f3f3f3;
 }
 
-.text-col{
+.text-col {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -16,51 +16,50 @@
   margin-right: 10vw;
 }
 
-.text-col p{
-  font-family: 'Rawson-light', sans-serif;
+.text-col p {
+  font-family: "Rawson-light", sans-serif;
   font-size: 1.2em;
   position: relative;
-  top:-50px;
+  top: -50px;
 }
 
-.dribble-link{
+.dribble-link {
   width: 100%;
 }
 
-.visit-me{
+.visit-me {
   display: none;
 }
 
-@media screen and (max-device-width: 420px) {
-  #branding-header{
+@media screen and (max-device-width: 430px) {
+  #branding-header {
     padding: 12vw 10vw;
     flex-direction: column;
   }
 
-  .text-col{
+  .text-col {
     width: 100%;
   }
 
-  .text-col p{
-    top:0px;
+  .text-col p {
+    top: 0px;
   }
 
-  .drible{
+  .drible {
     width: 45vw;
     margin: 0px auto;
     text-decoration: none;
     text-align: center;
   }
 
-  .visit-me{
-    font-family: 'Rawson-bold', sans-serif;  
+  .visit-me {
+    font-family: "Rawson-bold", sans-serif;
     font-style: normal;
     font-size: 1.2em;
     display: block;
   }
 
-  .dribble-link{
+  .dribble-link {
     margin-top: 10px;
   }
-  
-}  
+}

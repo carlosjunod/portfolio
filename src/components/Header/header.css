@@ -1,8 +1,8 @@
-header#main_header{
+header#main_header {
   width: 100vw;
   height: 100vh;
   font-weight: bold;
-  font-family: 'Rawson-black', sans-serif;
+  font-family: "Rawson-black", sans-serif;
   color: white;
   display: flex;
   flex-direction: row;
@@ -13,20 +13,19 @@ header#main_header{
 
   background: #177492;
   background: -moz-linear-gradient(-45deg, #177492 0%, #512386 100%);
-  background: -webkit-linear-gradient(-45deg, #177492 0%,#512386 100%);
-  background: linear-gradient(135deg, #177492 0%,#512386 100%);
+  background: -webkit-linear-gradient(-45deg, #177492 0%, #512386 100%);
+  background: linear-gradient(135deg, #177492 0%, #512386 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#177492', endColorstr='#512386',GradientType=1 );
 }
 
-#main_header .carlosjunod-logo-linar{
+#main_header .carlosjunod-logo-linar {
   width: 100%;
   margin-top: 6%;
   text-align: center;
 }
 
-
-@media screen and (max-device-width: 420px) {
-  #main_header .carlosjunod-logo-linar{
+@media screen and (max-device-width: 430px) {
+  #main_header .carlosjunod-logo-linar {
     margin-top: 0px;
     text-align: center;
     display: flex;
@@ -34,7 +33,7 @@ header#main_header{
     align-items: center;
   }
 
-  #main_header .carlosjunod-logo-linar svg{
+  #main_header .carlosjunod-logo-linar svg {
     width: 60%;
     height: 80%;
   }

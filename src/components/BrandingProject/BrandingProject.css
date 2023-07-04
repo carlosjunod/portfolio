@@ -1,7 +1,7 @@
-.branding-project{
+.branding-project {
   position: relative;
-  width: calc(100vw/3);
-  height: calc(100vh/2);
+  width: calc(100vw / 3);
+  height: calc(100vh / 2);
   background-size: cover;
   background-color: #263238;
   z-index: 9;
@@ -15,40 +15,40 @@
 }
 
 /* Background */
-.branding-project .bg{
+.branding-project .bg {
   position: absolute;
   width: 160%;
-  transition: all 400ms;  
+  transition: all 400ms;
 }
 
-.branding-project .bg img{
-  width:140%;
+.branding-project .bg img {
+  width: 140%;
 }
 
-.branding-project:hover .bg{
+.branding-project:hover .bg {
   width: 120%;
-  opacity: .6;
+  opacity: 0.6;
   transform: rotate(5deg);
 }
 
 /* Logo */
 
-.branding-project .logo{
+.branding-project .logo {
   width: 80%;
   transition: all 500ms;
   z-index: 10;
 }
 
-.branding-project:hover .logo{
+.branding-project:hover .logo {
   width: 90%;
 }
 
 /* Dribbble */
-.dribbble{
-  background-color: #E9508A;
+.dribbble {
+  background-color: #e9508a;
   width: 20%;
   position: absolute;
-  bottom:-30px;
+  bottom: -30px;
   text-align: center;
   padding: 6px;
   border-radius: 5px 5px 0px 0px;
@@ -58,16 +58,16 @@
   text-decoration: none;
 }
 
-.branding-project:hover .dribbble{
-  bottom:0px;
+.branding-project:hover .dribbble {
+  bottom: 0px;
   transition: all 500ms;
 }
 
-@media screen and (max-device-width: 420px) {
-  .branding-project{
+@media screen and (max-device-width: 430px) {
+  .branding-project {
     width: 100vw;
   }
-  .dribbble{
+  .dribbble {
     width: 30%;
     bottom: 0px;
   }

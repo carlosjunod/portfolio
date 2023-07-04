@@ -174,7 +174,7 @@ class App extends Component {
     const projects = this.state.projects;
     return (
       <div key={i}>
-        <MediaQuery query='(min-device-width: 1224px)'>
+        <MediaQuery query='(min-device-width: 1440px)'>
           <Project
             id={i}
             content={project}
@@ -187,7 +187,7 @@ class App extends Component {
             loadProject={this._loadProject}
           />
         </MediaQuery>
-        <MediaQuery query='(max-device-width: 420px)'>
+        <MediaQuery query='(max-device-width: 430px)'>
           <ProjectMobile
             id={i}
             content={project}
