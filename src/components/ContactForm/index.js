@@ -1,58 +1,56 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import "./ContactForm.css";
 import emailjs from "@emailjs/browser";
+import "animate.css";
 
 const ContactFrom = () => {
   const [formState, setFormState] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    reply_to: "",
     message: "",
   });
   const [focusedField, setFocusedField] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
-  const validateForm = useCallback(
-    (form) => {
-      let valid = true;
+  const [messageSentStatus, setMessageSentStatus] = useState("");
+  const [messageLoading, setMessageLoading] = useState(false);
 
-      if (!formState.name) {
-        valid = false;
-      }
+  const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
-      if (!formState.email) {
-        valid = false;
-      }
+  const validateForm = useCallback(() => {
+    let valid = true;
 
-      if (!formState.message) {
-        valid = false;
-      }
+    if (!formState.from_name) {
+      valid = false;
+    }
 
-      if (!form?.current) {
-        valid = false;
-      }
+    if (!formState.reply_to || !isValidEmail(formState.reply_to)) {
+      valid = false;
+    }
 
-      return valid;
-    },
-    [formState]
-  );
+    if (!formState.message) {
+      valid = false;
+    }
+
+    return valid;
+  }, [formState]);
 
   const form = useRef(null);
 
   const _focusHandlerIn = (event) => setFocusedField(event.target.name);
   const _focusHandlerOut = () => setFocusedField("");
-  const _onChange = useCallback(
-    (event) => {
-      setFormState({ ...formState, [event.target.name]: event.target.value });
-    },
-    [formState]
-  );
+  const _onChange = (event) => {
+    setFormState({ ...formState, [event.target.name]: event.target.value });
+  };
+
   useEffect(() => {
     setIsFormValid(validateForm());
-  }, [validateForm, _onChange]);
+  }, [validateForm, formState]);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     if (validateForm()) {
+      setMessageLoading(true);
       emailjs
         .sendForm(
           process.env.REACT_APP_SERVICE_ID,
@@ -62,7 +60,11 @@ const ContactFrom = () => {
         )
         .then(
           (result) => {
-            console.log(result.text);
+            setMessageLoading(false);
+            setMessageSentStatus(`${result.status}`);
+            setTimeout(() => {
+              setMessageSentStatus("");
+            }, 5000);
           },
           (error) => {
             console.log(error.text);
@@ -71,39 +73,52 @@ const ContactFrom = () => {
     }
   };
 
+  const clearAll = () => {
+    setFormState({
+      from_name: "",
+      reply_to: "",
+      message: "",
+    });
+    setMessageSentStatus("");
+  };
+
   return (
     <section id='contact-form'>
       <form action='post' onSubmit={sendEmail} ref={form}>
         <h3>Let's talk...</h3>
         <p
           className={
-            focusedField === "name" || formState.name ? "active" : undefined
+            focusedField === "from_name" || formState.from_name
+              ? "active"
+              : undefined
           }
         >
-          <label htmlFor='name'>Name</label>
+          <label htmlFor='from_name'>Name</label>
           <input
             type='text'
-            name='name'
-            id='name'
+            name='from_name'
+            id='from_name'
             onFocus={(input) => _focusHandlerIn(input)}
             onBlur={_focusHandlerOut}
-            value={formState.name}
+            value={formState.from_name}
             onChange={_onChange}
           />
         </p>
         <p
           className={
-            focusedField === "email" || formState.email ? "active" : undefined
+            focusedField === "reply_to" || formState.reply_to
+              ? "active"
+              : undefined
           }
         >
-          <label htmlFor='email'>e-mail</label>
+          <label htmlFor='reply_to'>e-mail</label>
           <input
             type='email'
-            name='email'
-            id='email'
+            name='reply_to'
+            id='reply_to'
             onFocus={(input) => _focusHandlerIn(input)}
             onBlur={_focusHandlerOut}
-            value={formState.email}
+            value={formState.reply_to}
             onChange={_onChange}
           />
         </p>
@@ -118,18 +133,42 @@ const ContactFrom = () => {
           <textarea
             name='message'
             defaultValue=''
+            value={formState.message}
             id='message'
             onFocus={(input) => _focusHandlerIn(input)}
             onBlur={_focusHandlerOut}
             onChange={_onChange}
           ></textarea>
         </p>
-        <input
-          type='submit'
-          value='submit'
-          className={`submit ${!isFormValid ? "disabled" : ""}`}
-          onSubmit={sendEmail}
-        />
+        <div className='button-container'>
+          <input
+            type='submit'
+            value='submit'
+            className={`submit ${!isFormValid ? "disabled" : ""}`}
+            onSubmit={sendEmail}
+          />
+          <span className='clear-all' onClick={clearAll}>
+            clear all
+          </span>
+        </div>
+        {messageLoading && (
+          <div className='animate__pulse animate__animated loading'>
+            Loading...
+          </div>
+        )}
+        {messageSentStatus && (
+          <div
+            className={`confirmationMessage ${
+              messageSentStatus === "200" ? "OK" : "ERROR"
+            }`}
+          >
+            {messageSentStatus === "200" ? (
+              <p>Message sent successfully! 🙂</p>
+            ) : (
+              <p>Message failed to send. Please try again. 😨</p>
+            )}
+          </div>
+        )}
       </form>
     </section>
   );

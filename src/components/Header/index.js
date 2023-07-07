@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import HeaderRotator from "../HeaderRotator";
 import HeaderRotatorMobile from "../HeaderRotatorMobile";
-import { CSSTransitionGroup } from "react-transition-group";
 import { SparkScroll, sparkScrollFactory } from "../app-spark";
 import ScrollAnimation from "../ScrollAnimation";
 import SwipeDown from "../SwipeDown";
